@@ -70,7 +70,7 @@ async function Trex () {
     conn.version = [3,2147,14];
     const Session = new StringSession();
     
-    conn.browserDescription = ["ALPHA", "Safari", '4.0.0']
+    conn.browserDescription = ["ALPHA-v5", "Safari", '5.0.0']
 
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -97,7 +97,7 @@ async function Trex () {
     })    
 
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('⎝🛡️ A')}${chalk.blue.bold('LPHA 🛡️⎠')}
+        console.log(`${chalk.green.bold('⎝🛡️ A')}${chalk.blue.bold('LPHA-v5🛡️⎠')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 ${chalk.blue.italic('⎝🛡️ Connecting to WhatsApp...▶')}`);
     });
@@ -139,7 +139,7 @@ ${chalk.blue.italic('⎝🛡️ Connecting to WhatsApp...▶')}`);
        );
         
         console.log(
-            chalk.blueBright.italic('⎝🛡️ ALPHA 🛡️⎠ WhatsApp User Bot v4.0.0')
+            chalk.blueBright.italic('⎝🛡️ ALPHA 🛡️⎠ WhatsApp User Bot v5.0.0')
         );
         
          if (config.LANG == 'EN') {
