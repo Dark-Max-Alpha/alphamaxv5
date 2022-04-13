@@ -10,25 +10,25 @@ const fs = require('fs');
 async function whatsAsena() {
   const conn = new WAConnection();
   conn.logger.level = 'warn';
-  conn.version = [2, 2126, 14]
+  conn.version = [3,2147,14]
 
   conn.on('connecting', async () => {
-    console.log(`${chalk.green.bold('T-REX')}${chalk.green.bold('Team')}
-${chalk.white.italic('T-REX String code recipient')}
-${chalk.blue.bold('ℹ️  Connecting T-REX... Please wait.')}`);
+    console.log(`${chalk.green.bold('Alpha')}${chalk.green.bold('Team')}
+${chalk.white.italic('Alpha String code recipient')}
+${chalk.blue.bold('ℹ️  Connecting Alpha... Please wait.')}`);
   });
 
   conn.on('open', async () => {
     console.log(
-      chalk.green.bold('T-REX QR Code: '),
-      'TREX;;;' +
+      chalk.green.bold('ALPHA QR Code: '),
+      'ALPHA;;;' +
       Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString(
         'base64'
       )
     );
     await conn.sendMessage(
       conn.user.jid,
-      'TREX;;;' +
+      'ALPHA;;;' +
       Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString(
         'base64'
       ),
@@ -37,13 +37,13 @@ ${chalk.blue.bold('ℹ️  Connecting T-REX... Please wait.')}`);
     if (conn.user.jid.startsWith('91')) {
       await conn.sendMessage(
         conn.user.jid,
-        '*~___________~* *'+ conn.user.name + ' ~___________~*\n\n*▪️ T-REX Scanned✅️*\n*▪️Thanks For Choosing T-REX 😈*',
+        '*~___________~* *'+ conn.user.name + ' ~___________~*\n\n*▪️ ALPHA Scanned✅️*\n*▪️Thanks For Choosing ALPHA 😈*',
         MessageType.text
       );
     } else {
       await conn.sendMessage(
         conn.user.jid,
-        '*~_____________~* *'+ conn.user.name + ' ~_____________~*\n\n*▪️ T-REX Successfully Scanned✅️*\n*▪️Thanks For Choosing T-REX😈*',
+        '*~_____________~* *'+ conn.user.name + ' ~_____________~*\n\n*▪️ ALPHA Successfully Scanned✅️*\n*▪️Thanks For Choosing ALPHA😈*',
         MessageType.text
       );
     }
