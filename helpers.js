@@ -5,13 +5,13 @@ T-REX HIRUWA
 */
 
 function successfullMessage(msg) {
-    return "🎅❄️ T-REX*:  ```" + msg + "```"
+    return "ALPHA*:  ```" + msg + "```"
 }
 function errorMessage(msg) {
-    return "☃️❄️ T-REX*:  ```" + msg + "```"
+    return "ALPHa*:  ```" + msg + "```"
 }
 function infoMessage(msg) {
-    return "🎅❄️ T-REX*:  ```" + msg + "```"
+    return "ALPHA*:  ```" + msg + "```"
 }
 
 
